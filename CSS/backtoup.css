@@ -1,0 +1,71 @@
+/* -------------- BOTÃO BACK TO TOP -------------- */
+.backToTop {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 999;
+
+  background: linear-gradient(135deg, rgba(0,174,217,0.15), rgba(0,174,217,0.05));
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.7);
+  transition: all 0.3s cubic-bezier(.2,.9,.3,1);
+}
+
+.backToTop.show {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+.backToTop i {
+  position: absolute;
+  font-size: 16px;
+  color: var(--color-white);
+  z-index: 10;
+  transition: transform 0.3s ease;
+}
+
+.backToTop:hover i {
+  transform: translateY(-2px);
+}
+
+.progress-circle {
+  transform: rotate(-90deg);
+}
+
+.progress-circle circle {
+  fill: none;
+  stroke-linecap: round;
+  stroke-width: 3;
+}
+
+.progress-circle circle:first-child {
+  stroke: rgba(255,255,255,0.1);
+}
+
+.progress-circle circle:last-child {
+  stroke: var(--color-primary);
+  stroke-dasharray: 113.1;
+  stroke-dashoffset: 113.1;
+  transition: stroke-dashoffset 0.2s linear;
+}
+
+.backToTop.magnet {
+  transform: scale(1.1) translate(var(--mx,0), var(--my,0));
+  transition: transform 0.2s ease;
+}

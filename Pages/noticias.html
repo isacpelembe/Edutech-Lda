@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../CSS/style.css" />
+  <link rel="stylesheet" href="../CSS/headerpages.css">
+  <link rel="stylesheet" href="../CSS/noticias.css">
+  <link rel="icon" type="image/png" href="../Img/Logotipo/Icone.png" />
+  <title>Notícias - Edutech, Lda | Tecnologia Para O Futuro</title>
+</head>
+<body>
+
+<!-- --------------- HEADER --------------- -->
+<header class="header">
+  <nav class="navbar">
+    <button id="menuBtn" class="menu-btn">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <div class="logo">
+      <a href="/index.html"><img src="../Img/Logotipo/Logo-04.png" alt="Logo do site" /></a>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="../index.html" data-pt="Início" data-en="Home">Início</a></li>
+      <li><a href="../Pages/contacto.html" data-pt="Contato" data-en="Contact">Contato</a></li>
+      <li><a href="../Pages/noticias.html" data-pt="Notícias" data-en="News">Notícias</a></li>
+      <li><a href="../Pages/servicos.html" data-pt="Serviços" data-en="Services">Serviços</a></li>
+      <li><a href="../Pages/softwares.html" data-pt="Softwares" data-en="Software">Softwares</a></li>
+      <li><a href="../Pages/suporte.html" data-pt="Suporte" data-en="Support">Suporte</a></li>
+      <li><a href="../Pages/sobre-nos.html" data-pt="Sobre Nós" data-en="About Us">Sobre Nós</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <a href="../Pages/suporte.html" class="btn-support">
+        <i class="fa-solid fa-headset"></i>
+        <span data-pt="Pedido de Suporte" data-en="Support Request">Pedido de Suporte</span>
+      </a>
+
+      <div class="language-selector">
+        <button id="langBtn" class="icon-btn">
+          <i class="fa-solid fa-globe"></i>
+        </button>
+        <ul class="language-dropdown" id="languageDropdown">
+          <li data-lang="pt"><img src="../Img/Lang/PT.png" alt="Português" /> Português</li>
+          <li data-lang="en"><img src="../Img/Lang/ENG.png" alt="English" /> English</li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- --------------- MOBILE MENU MODERNO --------------- -->
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="close-btn" id="closeBtn">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <canvas id="techCanvas"></canvas>
+    <nav class="menu-links">
+      <a href="../index.html" data-pt="Início" data-en="Home">Início</a>
+      <a href="../Pages/contacto.html" data-pt="Contato" data-en="Contact">Contato</a>
+      <a href="../Pages/noticias.html" data-pt="Notícias" data-en="News">Notícias</a>
+      <a href="../Pages/servicos.html" data-pt="Serviços" data-en="Services">Serviços</a>
+      <a href="../Pages/softwares.html" data-pt="Softwares" data-en="Software">Softwares</a>
+      <a href="../Pages/suporte.html" data-pt="Suporte" data-en="Support">Suporte</a>
+      <a href="../Pages/sobre-nos.html" data-pt="Sobre Nós" data-en="About Us">Sobre Nós</a>
+    </nav>
+  </div>
+</header>
+
+<!-- --------------- SMARTHEAD MODERNO --------------- -->
+<section class="smarthead">
+  <div class="edu-slides">
+    <div class="edu-slide s1" style="background-image: url('../Img/Slides/IMG_8753.jpg');"></div>
+    <div class="edu-slide s2" style="background-image: url('../Img/Slides/IMG_8977.jpg');"></div>
+    <div class="edu-slide s3" style="background-image: url('../Img/Slides/IMG_8915.jpg');"></div>
+  </div>
+
+  <div class="edu-overlay"></div>
+
+  <canvas id="tech-smart"></canvas>
+
+  <div class="edu-content">
+    <span class="edu-eyebrow" data-pt="Está em" data-en="You are at">Está em</span>
+    <h1 data-pt="Portal de Notícias" data-en="News Portal">Portal de Notícias</h1>
+    <nav class="edu-breadcrumb">
+      <a href="../index.html" data-pt="Início" data-en="Home">Início</a>
+      <span>/</span>
+      <strong data-pt="Notícias" data-en="News">Notícias</strong>
+    </nav>
+  </div>
+</section>
+
+<!-- ---------------- FILTROS ---------------- -->
+<div class="filters">
+  <button class="filter-btn active" data-category="all" data-pt="Todos" data-en="All">Todos</button>
+  <button class="filter-btn" data-category="Educacional" data-pt="Educacional" data-en="Educational">Educacional</button>
+  <button class="filter-btn" data-category="Tecnologia" data-pt="Tecnologia" data-en="Technology">Tecnologia</button>
+  <button class="filter-btn" data-category="Inovação" data-pt="Inovação" data-en="Innovation">Inovação</button>
+</div>
+
+<div class="news-container">
+  <!-- Notícia 1 -->
+  <div class="news-card" data-category="Educacional">
+    <h3 class="news-title" data-pt="Edutech Lança Novo Software Educacional" data-en="Edutech Launches New Educational Software">
+      Edutech Lança Novo Software Educacional
+    </h3>
+    <img src="../Img/Slides/IMG_8753.jpg" class="news-image" alt="Notícia 1">
+    <div class="news-tags">
+      <span data-pt="Educacional" data-en="Educational">Educacional</span>
+      <span data-pt="Tecnologia" data-en="Technology">Tecnologia</span>
+    </div>
+    <p class="news-paragraph" data-pt="A Edutech Lda lançou recentemente uma plataforma que permite aos professores gerirem atividades escolares de forma mais eficiente. A ferramenta integra planejamento, avaliação e comunicação entre professores e alunos."
+       data-en="Edutech Ltd. recently launched a platform that allows teachers to manage school activities more efficiently. The tool integrates planning, assessment, and communication between teachers and students.">
+      A Edutech Lda lançou recentemente uma plataforma que permite aos professores gerirem atividades escolares de forma mais eficiente. A ferramenta integra planejamento, avaliação e comunicação entre professores e alunos.
+    </p>
+    <button class="btn read-more" data-pt="Ver mais" data-en="Read more">Ver mais</button>
+
+    <div class="modal-content-hidden" style="display:none;">
+      <img src="../Img/Slides/IMG_8753.jpg" class="modal-image" alt="Notícia 1">
+      <p data-pt="A Edutech Lda lançou recentemente uma plataforma que permite aos professores gerirem atividades escolares de forma mais eficiente. A ferramenta integra planejamento, avaliação e comunicação entre professores e alunos."
+         data-en="Edutech Ltd. recently launched a platform that allows teachers to manage school activities more efficiently. The tool integrates planning, assessment, and communication between teachers and students.">
+        A Edutech Lda lançou recentemente uma plataforma que permite aos professores gerirem atividades escolares de forma mais eficiente. A ferramenta integra planejamento, avaliação e comunicação entre professores e alunos.
+      </p>
+      <p data-pt="O software também oferece dashboards com relatórios detalhados sobre o desempenho de cada turma e aluno, permitindo intervenções rápidas e eficazes."
+         data-en="The software also provides dashboards with detailed reports on each class and student's performance, allowing quick and effective interventions.">
+        O software também oferece dashboards com relatórios detalhados sobre o desempenho de cada turma e aluno, permitindo intervenções rápidas e eficazes.
+      </p>
+      <p data-pt="Além disso, a plataforma é compatível com dispositivos móveis, garantindo acessibilidade em qualquer lugar."
+         data-en="Additionally, the platform is mobile-friendly, ensuring accessibility anywhere.">
+        Além disso, a plataforma é compatível com dispositivos móveis, garantindo acessibilidade em qualquer lugar.
+      </p>
+      <p data-pt="A implementação já começou em diversas escolas públicas e privadas de Maputo, recebendo feedback positivo de educadores."
+         data-en="Implementation has already begun in several public and private schools in Maputo, receiving positive feedback from educators.">
+        A implementação já começou em diversas escolas públicas e privadas de Maputo, recebendo feedback positivo de educadores.
+      </p>
+      <p data-pt="Segundo a Edutech, a missão é conectar tecnologia e educação para aumentar a produtividade e engajamento no ensino."
+         data-en="According to Edutech, the mission is to connect technology and education to increase productivity and engagement in teaching.">
+        Segundo a Edutech, a missão é conectar tecnologia e educação para aumentar a produtividade e engajamento no ensino.
+      </p>
+    </div>
+  </div>
+
+  <!-- Notícia 2 -->
+  <div class="news-card" data-category="Tecnologia">
+    <h3 class="news-title" data-pt="Novo Dispositivo Eletrônico da Edutech" data-en="New Edutech Electronic Device">
+      Novo Dispositivo Eletrônico da Edutech
+    </h3>
+    <img src="../Img/Slides/IMG_8977.jpg" class="news-image" alt="Notícia 2">
+    <div class="news-tags">
+      <span data-pt="Tecnologia" data-en="Technology">Tecnologia</span>
+      <span data-pt="Inovação" data-en="Innovation">Inovação</span>
+    </div>
+    <p class="news-paragraph" data-pt="A Edutech desenvolveu um dispositivo eletrônico para auxiliar alunos no aprendizado de matemática, com recursos interativos e gamificados."
+       data-en="Edutech developed an electronic device to assist students in learning mathematics, with interactive and gamified features.">
+      A Edutech desenvolveu um dispositivo eletrônico para auxiliar alunos no aprendizado de matemática, com recursos interativos e gamificados.
+    </p>
+    <button class="btn read-more" data-pt="Ver mais" data-en="Read more">Ver mais</button>
+
+    <div class="modal-content-hidden" style="display:none;">
+      <img src="../Img/Slides/IMG_8977.jpg" class="modal-image" alt="Notícia 2">
+      <p data-pt="A Edutech desenvolveu um dispositivo eletrônico para auxiliar alunos no aprendizado de matemática, com recursos interativos e gamificados."
+         data-en="Edutech developed an electronic device to assist students in learning mathematics, with interactive and gamified features.">
+        A Edutech desenvolveu um dispositivo eletrônico para auxiliar alunos no aprendizado de matemática, com recursos interativos e gamificados.
+      </p>
+      <p data-pt="O equipamento utiliza sensores e telas touch para tornar o estudo mais envolvente, permitindo aos alunos visualizar conceitos abstratos de forma concreta."
+         data-en="The device uses sensors and touch screens to make learning more engaging, allowing students to visualize abstract concepts concretely.">
+        O equipamento utiliza sensores e telas touch para tornar o estudo mais envolvente, permitindo aos alunos visualizar conceitos abstratos de forma concreta.
+      </p>
+      <p data-pt="Professores podem criar desafios personalizados e acompanhar o progresso de cada aluno em tempo real."
+         data-en="Teachers can create personalized challenges and monitor each student's progress in real time.">
+        Professores podem criar desafios personalizados e acompanhar o progresso de cada aluno em tempo real.
+      </p>
+      <p data-pt="O dispositivo é portátil, resistente e já está sendo testado em várias escolas piloto na província de Maputo."
+         data-en="The device is portable, durable, and is already being tested in several pilot schools in Maputo province.">
+        O dispositivo é portátil, resistente e já está sendo testado em várias escolas piloto na província de Maputo.
+      </p>
+    </div>
+  </div>
+
+  <!-- Notícia 3 -->
+  <div class="news-card" data-category="Inovação">
+    <h3 class="news-title" data-pt="Parceria Edutech e Faculdade de Engenharia" data-en="Edutech Partnership with Faculty of Engineering">
+      Parceria Edutech e Faculdade de Engenharia
+    </h3>
+    <img src="../Img/Slides/IMG_8915.jpg" class="news-image" alt="Notícia 3">
+    <div class="news-tags">
+      <span data-pt="Inovação" data-en="Innovation">Inovação</span>
+      <span data-pt="Educacional" data-en="Educational">Educacional</span>
+    </div>
+    <p class="news-paragraph" data-pt="Edutech firmou parceria com a Faculdade de Engenharia para desenvolver projetos tecnológicos em ambiente educacional, promovendo inovação."
+       data-en="Edutech formed a partnership with the Faculty of Engineering to develop technological projects in an educational environment, promoting innovation.">
+      Edutech firmou parceria com a Faculdade de Engenharia para desenvolver projetos tecnológicos em ambiente educacional, promovendo inovação.
+    </p>
+    <button class="btn read-more" data-pt="Ver mais" data-en="Read more">Ver mais</button>
+
+    <div class="modal-content-hidden" style="display:none;">
+      <img src="../Img/Slides/IMG_8915.jpg" class="modal-image" alt="Notícia 3">
+      <p data-pt="Edutech firmou parceria com a Faculdade de Engenharia para desenvolver projetos tecnológicos em ambiente educacional, promovendo inovação."
+         data-en="Edutech formed a partnership with the Faculty of Engineering to develop technological projects in an educational environment, promoting innovation.">
+        Edutech firmou parceria com a Faculdade de Engenharia para desenvolver projetos tecnológicos em ambiente educacional, promovendo inovação.
+      </p>
+      <p data-pt="O acordo prevê pesquisa conjunta, desenvolvimento de protótipos e workshops para estudantes da área de tecnologia."
+         data-en="The agreement includes joint research, prototype development, and workshops for students in the technology field.">
+        O acordo prevê pesquisa conjunta, desenvolvimento de protótipos e workshops para estudantes da área de tecnologia.
+      </p>
+      <p data-pt="Essa colaboração visa estimular a criatividade e a aplicação prática do conhecimento teórico nas escolas e universidades."
+         data-en="This collaboration aims to stimulate creativity and practical application of theoretical knowledge in schools and universities.">
+        Essa colaboração visa estimular a criatividade e a aplicação prática do conhecimento teórico nas escolas e universidades.
+      </p>
+      <p data-pt="Espera-se que novos produtos educacionais inovadores sejam lançados nos próximos meses."
+         data-en="New innovative educational products are expected to be launched in the coming months.">
+        Espera-se que novos produtos educacionais inovadores sejam lançados nos próximos meses.
+      </p>
+    </div>
+  </div>
+
+  <!-- Notícia 4 -->
+  <div class="news-card" data-category="Educacional">
+    <h3 class="news-title" data-pt="Lançamento do Aplicativo Mobile Edutech" data-en="Edutech Mobile App Launch">
+      Lançamento do Aplicativo Mobile Edutech
+    </h3>
+    <img src="../Img/Slides/IMG_8753.jpg" class="news-image" alt="Notícia 4">
+    <div class="news-tags">
+      <span data-pt="Educacional" data-en="Educational">Educacional</span>
+      <span data-pt="Tecnologia" data-en="Technology">Tecnologia</span>
+    </div>
+    <p class="news-paragraph" data-pt="A Edutech lançou seu aplicativo mobile para alunos e professores acessarem conteúdos educativos de qualquer lugar."
+       data-en="Edutech launched its mobile app to allow students and teachers to access educational content from anywhere.">
+      A Edutech lançou seu aplicativo mobile para alunos e professores acessarem conteúdos educativos de qualquer lugar.
+    </p>
+    <button class="btn read-more" data-pt="Ver mais" data-en="Read more">Ver mais</button>
+
+    <div class="modal-content-hidden" style="display:none;">
+      <img src="../Img/Slides/IMG_8753.jpg" class="modal-image" alt="Notícia 4">
+      <p data-pt="A Edutech lançou seu aplicativo mobile para alunos e professores acessarem conteúdos educativos de qualquer lugar."
+         data-en="Edutech launched its mobile app to allow students and teachers to access educational content from anywhere.">
+        A Edutech lançou seu aplicativo mobile para alunos e professores acessarem conteúdos educativos de qualquer lugar.
+      </p>
+      <p data-pt="O app permite acompanhamento de desempenho, envio de tarefas e comunicação direta com os professores."
+         data-en="The app allows performance tracking, task submission, and direct communication with teachers.">
+        O app permite acompanhamento de desempenho, envio de tarefas e comunicação direta com os professores.
+      </p>
+      <p data-pt="Compatível com Android e iOS, busca tornar o ensino mais acessível e moderno."
+         data-en="Compatible with Android and iOS, it aims to make education more accessible and modern.">
+        Compatível com Android e iOS, busca tornar o ensino mais acessível e moderno.
+      </p>
+      <p data-pt="A Edutech planeja atualizações frequentes para adicionar funcionalidades interativas adicionais."
+         data-en="Edutech plans frequent updates to add additional interactive features.">
+        A Edutech planeja atualizações frequentes para adicionar funcionalidades interativas adicionais.
+      </p>
+    </div>
+  </div>
+
+  <!-- Notícia 5 -->
+  <div class="news-card" data-category="Educacional">
+    <h3 class="news-title" data-pt="Treinamento de Professores com Tecnologia Edutech" data-en="Teacher Training with Edutech Technology">
+      Treinamento de Professores com Tecnologia Edutech
+    </h3>
+    <img src="../Img/Slides/IMG_8977.jpg" class="news-image" alt="Notícia 5">
+    <div class="news-tags">
+      <span data-pt="Educacional" data-en="Educational">Educacional</span>
+      <span data-pt="Inovação" data-en="Innovation">Inovação</span>
+    </div>
+    <p class="news-paragraph" data-pt="Edutech promove workshops para capacitar professores no uso de novas tecnologias educacionais."
+       data-en="Edutech promotes workshops to train teachers in the use of new educational technologies.">
+      Edutech promove workshops para capacitar professores no uso de novas tecnologias educacionais.
+    </p>
+    <button class="btn read-more" data-pt="Ver mais" data-en="Read more">Ver mais</button>
+
+    <div class="modal-content-hidden" style="display:none;">
+      <img src="../Img/Slides/IMG_8977.jpg" class="modal-image" alt="Notícia 5">
+      <p data-pt="Edutech promove workshops para capacitar professores no uso de novas tecnologias educacionais."
+         data-en="Edutech promotes workshops to train teachers in the use of new educational technologies.">
+        Edutech promove workshops para capacitar professores no uso de novas tecnologias educacionais.
+      </p>
+      <p data-pt="Os treinamentos incluem softwares educativos, aplicativos mobile e gestão digital de aulas."
+         data-en="Trainings include educational software, mobile apps, and digital classroom management.">
+        Os treinamentos incluem softwares educativos, aplicativos mobile e gestão digital de aulas.
+      </p>
+      <p data-pt="Mais de 100 professores já participaram do programa piloto em Manhiça."
+         data-en="Over 100 teachers have participated in the pilot program in Manhiça.">
+        Mais de 100 professores já participaram do programa piloto em Manhiça.
+      </p>
+      <p data-pt="O objetivo é melhorar a experiência de aprendizado dos alunos através de práticas digitais modernas."
+         data-en="The goal is to enhance students' learning experience through modern digital practices.">
+        O objetivo é melhorar a experiência de aprendizado dos alunos através de práticas digitais modernas.
+      </p>
+    </div>
+  </div>
+
+  <!-- Notícia 6 -->
+  <div class="news-card" data-category="Tecnologia">
+    <h3 class="news-title" data-pt="Expansão das Operações da Edutech" data-en="Edutech Operations Expansion">
+      Expansão das Operações da Edutech
+    </h3>
+    <img src="../Img/Slides/IMG_8915.jpg" class="news-image" alt="Notícia 6">
+    <div class="news-tags">
+      <span data-pt="Tecnologia" data-en="Technology">Tecnologia</span>
+      <span data-pt="Inovação" data-en="Innovation">Inovação</span>
+    </div>
+    <p class="news-paragraph" data-pt="A Edutech expande suas operações para outras províncias, levando soluções digitais a mais escolas."
+       data-en="Edutech expands its operations to other provinces, bringing digital solutions to more schools.">
+      A Edutech expande suas operações para outras províncias, levando soluções digitais a mais escolas.
+    </p>
+    <button class="btn read-more" data-pt="Ver mais" data-en="Read more">Ver mais</button>
+
+    <div class="modal-content-hidden" style="display:none;">
+      <img src="../Img/Slides/IMG_8915.jpg" class="modal-image" alt="Notícia 6">
+      <p data-pt="A Edutech expande suas operações para outras províncias, levando soluções digitais a mais escolas."
+         data-en="Edutech expands its operations to other provinces, bringing digital solutions to more schools.">
+        A Edutech expande suas operações para outras províncias, levando soluções digitais a mais escolas.
+      </p>
+      <p data-pt="A expansão inclui instalação de softwares, dispositivos interativos e treinamento de professores locais."
+         data-en="The expansion includes installation of software, interactive devices, and training for local teachers.">
+        A expansão inclui instalação de softwares, dispositivos interativos e treinamento de professores locais.
+      </p>
+      <p data-pt="Espera-se que mais de 500 escolas se beneficiem dos recursos tecnológicos até o final do próximo ano."
+         data-en="It is expected that more than 500 schools will benefit from the technological resources by the end of next year.">
+        Espera-se que mais de 500 escolas se beneficiem dos recursos tecnológicos até o final do próximo ano.
+      </p>
+      <p data-pt="A Edutech reforça seu compromisso com a educação inclusiva e inovadora em todo o país."
+         data-en="Edutech reinforces its commitment to inclusive and innovative education throughout the country.">
+        A Edutech reforça seu compromisso com a educação inclusiva e inovadora em todo o país.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="modal-category"></div>
+    <h2 class="modal-title"></h2>
+    <img src="" class="modal-image">
+    <div class="modal-text"></div>
+  </div>
+</div>
+
+<!------------------ AREA DE FOOTER ----------------->
+<footer class="footer-tech">
+  <div class="tech-dots"></div>
+  <div class="footer-container">
+    <div class="footer-wrapper">
+
+      <div class="footer-brand">
+        <img src="../Img/Logotipo/Logo-02.png" alt="Edutech Logo">
+        <p
+          data-pt="A Edutech, Lda. desenvolve soluções tecnológicas inovadoras para o setor educacional."
+          data-en="Edutech Ltd. develops innovative technological solutions for the education sector.">
+          A Edutech, Lda. desenvolve soluções tecnológicas inovadoras para o setor educacional.
+        </p>
+
+        <div class="footer-social">
+          <a href="https://www.facebook.com/edutechmz/"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.linkedin.com/company/edutech-lda/"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/edutechmz/"><i class="fab fa-instagram"></i></a>
+          <a href="https://x.com/edutechmz"><i class="fab fa-x-twitter"></i></a>
+          <a href="https://www.youtube.com/@edutechmz"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <h4 data-pt="Serviços" data-en="Services">Serviços</h4>
+        <ul>
+          <li>
+            <a href="../Pages/servicos.html"
+               data-pt="Assistência Técnica e Suporte"
+               data-en="Technical Assistance and Support">
+              Assistência Técnica e Suporte
+            </a>
+          </li>
+          <li>
+            <a href="../Pages/servicos.html"
+               data-pt="Consultoria e Auditoria Tecnológica"
+               data-en="Technology Consulting and Auditing">
+              Consultoria e Auditoria Tecnológica
+            </a>
+          </li>
+          <li>
+            <a href="../Pages/servicos.html"
+               data-pt="Soluções de Software e Aplicações"
+               data-en="Software Solutions and Applications">
+              Soluções de Software e Aplicações
+            </a>
+          </li>
+          <li>
+            <a href="../Pages/servicos.html"
+               data-pt="Fabricação de Dispositivos Eletrónicos"
+               data-en="Electronic Device Manufacturing">
+              Fabricação de Dispositivos Eletrónicos
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+  <h4 data-pt="Contactos" data-en="Contacts">Contactos</h4>
+  <ul>
+    <li>
+      <i class="fas fa-phone"></i>
+      <div class="phones">
+        <span>+258 83 335 5955</span>
+        <span>+258 84 123 4567</span>
+      </div>
+    </li>
+
+    <li>
+      <i class="fas fa-envelope"></i>
+      <span>Info@edutech.co.mz</span>
+    </li>
+
+    <li>
+      <i class="fas fa-location-dot"></i>
+      <span data-pt="Manhiça, Maputo – Moçambique" data-en="Manhiça, Maputo – Mozambique">
+        Maluana, Manhiça, Maputo – Moçambique
+      </span>
+    </li>
+  </ul>
+</div>
+
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Copyright
+      ©<span id="currentYear"></span>
+      <span data-pt="Edutech, Lda." data-en="Edutech Lda.">Edutech, Lda.</span>
+      |
+      <span data-pt="Todos os Direitos Reservados" data-en="All Rights Reserved">
+        Todos os Direitos Reservados
+      </span>
+    </p>
+  </div>
+</footer>
+
+<script src="../JS/menu.js"></script>
+<script src="../JS/script.js"></script>
+<script src="../JS/smartheader.js"></script>
+<script src="../JS/noticias.js"></script>
+</body>
+</html>
